@@ -12,13 +12,12 @@ namespace TransRiwi.Moduls
         public string? LisenceNumber {get; set;}
         public string? LisenceCategory {get;set;}
         public int DrivingExperience {get; set;}
-        public Driver(string? lisenceNumber, string? lisenceCategory, int drivingExperience, Guid id, string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber) : 
-        base (id, name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber)
+        public Driver(string? lisenceNumber, string? lisenceCategory, int drivingExperience, string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber) : 
+        base (name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber)
         {
             LisenceNumber = lisenceNumber;
             LisenceCategory = lisenceCategory;
             DrivingExperience = drivingExperience;
-            Id = id;
             Name = name;
             LastName = lastName;
             TypeDocument = typeDocument;

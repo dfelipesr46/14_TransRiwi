@@ -16,9 +16,10 @@ namespace TransRiwi.Moduls
         public DateOnly BirthDate {get; set;}
         public string Email {get; set;}
         public string PhoneNumber {get; set;}
-        public User(Guid id, string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber)
+        
+        public User(string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber)
         {
-            Id = id;
+            
             Name = name;
             LastName = lastName;
             TypeDocument = typeDocument;
@@ -32,13 +33,12 @@ namespace TransRiwi.Moduls
         {
             Console.WriteLine("Mostrando la informacion del usuario: ");
             Console.WriteLine($"ID = {Id}");
-            Console.WriteLine($"");
-            Console.WriteLine($"");
-            Console.WriteLine($"");
-            Console.WriteLine($"");
-            Console.WriteLine($"");
-            Console.WriteLine($"");
-            Console.WriteLine($"");
+            Console.WriteLine($"Full Name = {Name} {LastName}");
+            Console.WriteLine($"Document type = {TypeDocument}");
+            Console.WriteLine($"Document Number = {IdentificationNumber}");
+            Console.WriteLine($"Birth Date = {BirthDate}");
+            Console.WriteLine($"Email = {Email}");
+            Console.WriteLine($"Phone Number = {PhoneNumber}");
         }
 
         public int CalculateAge()

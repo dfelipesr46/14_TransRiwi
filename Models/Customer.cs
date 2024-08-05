@@ -10,11 +10,11 @@ namespace TransRiwi.Moduls
 
         public string? MembershipLevel {get; set;}
         public string? PreferredPaymentMethod {get; set;}
-        public Customer(string? membershipLevel, string? preferredPaymentMethod, Guid id, string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber) : base (id, name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber)
+        public Customer(string? membershipLevel, string? preferredPaymentMethod, string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber) : 
+        base (name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber)
         {
             MembershipLevel = membershipLevel;
             PreferredPaymentMethod = preferredPaymentMethod;
-            Id = id;
             Name = name;
             LastName = lastName;
             TypeDocument = typeDocument;
@@ -26,7 +26,7 @@ namespace TransRiwi.Moduls
 
         public void UpdateMembershipLevel()
         {
-            
+
         }
 
 

@@ -13,11 +13,10 @@ namespace TransRiwi.Moduls
         public string? Tipo {get; set;}
         public string? EngineNumber {get; set;}
         public string? SerialNumber {get; set;}
-        public string? PeopleCapacity {get; set;}
+        public byte PeopleCapacity {get; set;}
         public string? Owner {get; set;}
-        public Vehicle(int id, string? placa, string? tipo, string? engineNumber, string? serialNumber, string? peopleCapacity, string? owner)
+        public Vehicle( string? placa, string? tipo, string? engineNumber, string? serialNumber, byte peopleCapacity, string? owner)
         {
-            Id = id;
             Placa = placa;
             Tipo = tipo;
             EngineNumber = engineNumber;
@@ -31,7 +30,14 @@ namespace TransRiwi.Moduls
 
         }
 
-        
+        public void showVehicles()
+        {
+            Console.WriteLine($"La placa del Vehiculo {Placa}");
+            Console.WriteLine($"Tipo de Vehiculo {Tipo}");
+            Console.WriteLine($"Numero de motor {EngineNumber}");
+            Console.WriteLine($"Numero de serie {SerialNumber}");
+            Console.WriteLine($"El vehiculo cuenta con capacidad para {PeopleCapacity} pasajeros");
+        }
 
     }
 }
